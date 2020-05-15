@@ -89,7 +89,7 @@ namespace AggregatorAPI.Controllers
           }
         }
       }
-      catch (ApplicationException e)
+      catch (Exception e)
       {
         errorMessage = e.Message;
         return errorMessage;
