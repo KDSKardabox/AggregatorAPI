@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orderdetail-deployment
+spec:
+  selector:
+    matchLabels:
+      app: orderdetail-pod
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: orderdetail-pod
+    spec:
+      containers:
+        - name: orderdetail-container
+          image: bollygame94/microserv-assign:orderdetail-api
+          ports:
+            - containerPort: 80
