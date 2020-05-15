@@ -27,9 +27,8 @@ namespace AggregatorAPI.Controllers
     {
       get
       {
-        return String.Format("http://{0}:{1}/{2}/",
+        return String.Format("http://{0}/{1}/",
           Configuration["UsersAPI:Host"],
-          Configuration["UsersAPI:Port"],
           Configuration["UsersAPI:Uri"]
         );
 
@@ -40,9 +39,8 @@ namespace AggregatorAPI.Controllers
     {
       get
       {
-        return String.Format("http://{0}:{1}/{2}/",
+        return String.Format("http://{0}/{1}/",
           Configuration["OrdersAPI:Host"],
-          Configuration["OrdersAPI:Port"],
           Configuration["OrdersAPI:Uri"]
         );
 
